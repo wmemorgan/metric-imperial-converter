@@ -21,48 +21,41 @@
         <nav class="navbar-nav">
           <a href="./public/docs.html">Documentation</a>
         </nav>
-      
       </div>
-    <header>
-      <h1>
-        Metric Imperial Converter
-      </h1>
-    </header>
-    <div id='userstories' style='margin-left: 5%; margin-top: 5%'>
-      <h3>User Stories</h3>
-      <ol>
-        <li>I will help prevent the client from trying to guess(sniff) the MIME type.</li>
-        <li>I will prevent cross-site scripting (XSS) attacks.</li>
-        <li>I can <b>GET</b> <code>/api/convert</code> with a single parameter containing an accepted number and unit and have it converted.</li>
-        <span style="font-weight:bold;font-style:italic">Hint: Split the input by looking for the index of the first character.</span><br>
-        <li>I can convert 'gal' to 'L' and vice versa. <b>(1 gal to 3.78541 L)</b></li>
-        <li>I can convert 'lbs' to 'kg' and vice versa. <b>(1 lbs to 0.453592 kg)</b></li> 
-        <li>I can convert 'mi' to 'km' and vice versa. <b>(1 mi to 1.60934 km)</b></li>
-        <li>If my unit of measurement is invalid, returned will be 'invalid unit'.</li>
-        <li>If my number is invalid, returned with will 'invalid number'.</li>
-        <li>If both are invalid, return will be 'invalid number and unit'.</li>
-        <li>I can use fractions, decimals or both in my parameter(ie. 5, 1/2, 2.5/6), but if nothing is provided it will default to 1.</li>
-        <li>My return will consist of the initNum, initUnit, returnNum, returnUnit, and string spelling out units in format <code>{initNum} {initial_Units} converts to {returnNum} {return_Units}</code> with the result rounded to 5 decimals.</li>
-        <li>All 16 unit tests are complete and passing.</li>
-        <li>All 5 functional tests are complete and passing.</li>
-      </ol>
-      <h3>Example usage:</h3>
-      <code>/api/convert?input=4gal</code><br>
-      <code>/api/convert?input=1/2km</code><br>
-      <code>/api/convert?input=5.4/3lbs</code><br>
-      <code>/api/convert?input=kg</code><br>
-      <h3>Example return:</h3>
-      <code>{initNum: 3.1, initUnit: 'mi', returnNum: 5.0000008, returnUnit: 'km', string: '3.1 miles converts to 5.00002 kilometers'}</code>
-    </div>
-    <hr style='margin: 50px'>
-    <div id='testui' style='margin-left: 5%'>
-      <h2 style="text-align: left">Front-End:</h2>
-      <form id="convertForm" class="border">
-        <input type="text" id="convertField" name="input" placeholder="3.1mi" style="width: 200px">
-        <input id="convert" type="submit" value='Convert!'>
-      </form>
-      <p id='result'></p>
-      <code id='jsonResult'></code>
+    <!-- Main Content   -->
+    <div class="content">
+      <!-- Home Page -->
+      <section class="section" id="intro">
+        <div class="container">
+          <h1 id="headline">Metric Imperial Converter</h1>
+          <div class="section-doc">
+            <p>
+              A REST API for metric/imperial conversion.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- API Demo UI -->
+      <section class="section">
+        <div id='testui'>
+          <div class="form-wrapper">
+            <h3 class="form-header">API Demo</h3>
+            <form id="convertForm" class="form border">
+              <input type="text" class="input-field-txt" id="convertField" name="input" placeholder="3.1mi">
+              <input id="convert" class="search-btn" type="submit" value='Convert!'>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Conversion Results -->
+      <section class="section" id="api-results">
+        <p id='result'></p>
+        <code id='jsonResult' class="code"></code>
+      </section>
+
+
     </div>
 
     <!-- Footer -->
@@ -97,8 +90,6 @@
         <p><a href="https://wilfredmorgan.com">wilfredmorgan.com</a></p>
       </div>
     </footer>
-
-    <hr style='margin: 50px; margin-top: 200px'>
     <!-- Your web-app is https, so your scripts need to be too -->
     <script src="https://code.jquery.com/jquery-2.2.1.min.js"
             integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
