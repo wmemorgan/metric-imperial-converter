@@ -103,21 +103,6 @@
     <script src="https://code.jquery.com/jquery-2.2.1.min.js"
             integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
             crossorigin="anonymous"></script>
-    <script>
-      $(function() {
-        $('#convertForm').submit(function() {
-          event.preventDefault();
-          $.ajax({
-            url: '/api/convert',
-            type: 'get',
-            data: $('#convertForm').serialize(),
-            success: function(data) {
-              $('#result').text(data.string || data);
-              $('#jsonResult').text(JSON.stringify(data));
-            }
-          });
-        });
-      });
-   </script>
+    <script src="/public/client.js"></script>
   </body>
 </html>
