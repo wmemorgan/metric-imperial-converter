@@ -222,10 +222,12 @@ section .container {
   justify-content: center;
   font-family: monospace;
   background: var(--light-primary-color);
+  padding: 0.5rem;
 }
 
 #result {
   font-weight: bold;
+  padding: 0.5rem;
 }
 
 #stock-data-credits {
