@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Metric-Imperial Converter</title>
-    <meta name="description" content="A cool thing made with HyperDev">
-    <link id="favicon" rel="icon" href="https://hyperdev.com/favicon-app.ico" type="image/x-icon">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./public/style.css">
-  </head>
+<head>
+  <title>Metric Imperial Converter</title>
+  <meta name="description" content="A REST API for metric/imperial conversion.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#022140">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="./public/style.css">
+</head>
   <body>
+      <!-- Header -->
+      <div class="page-header">
+        <!-- Logo -->
+        <div id="logo" class="brand">
+          <a href="/">Wilfred Morgan</a>
+        </div>
+        <!-- Navigation -->
+        <nav class="navbar-nav">
+          <a href="./public/docs.html">Documentation</a>
+        </nav>
+      
+      </div>
     <header>
       <h1>
         Metric Imperial Converter
@@ -51,6 +64,40 @@
       <p id='result'></p>
       <code id='jsonResult'></code>
     </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="cta-group">
+        <div class="cta-text">
+          <p>Need help with your project?</p>
+          <p>Reach out to me at
+            <a href="mailto:wilfred@wilfredmorgan.com?subject=Question" class="contact-btn">wilfred@wilfredmorgan.com</a>
+          </p>
+        </div>
+    
+      </div>
+    
+      <div class="social-media-group">
+        <div class="social-cta">
+          <p>Connect with me:</p>
+        </div>
+        <div class="social-media-icons">
+          <a href="https://www.linkedin.com/in/wilfredmorgan/" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/wmemorgan" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="mailto:wilfred@wilfredmorgan.com?subject=Question" class="contact-btn">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+      <div id="copyright-info">
+        <p><a href="https://wilfredmorgan.com">wilfredmorgan.com</a></p>
+      </div>
+    </footer>
+
     <hr style='margin: 50px; margin-top: 200px'>
     <!-- Your web-app is https, so your scripts need to be too -->
     <script src="https://code.jquery.com/jquery-2.2.1.min.js"
